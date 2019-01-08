@@ -1,24 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Master View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MasterViewController" customModule="UsingSegue" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="7sX-yz-hAm">
+                                <rect key="frame" x="0.0" y="295.5" width="375" height="76"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rlu-qh-DDB">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sjC-CD-0ra">
+                                        <rect key="frame" x="171.5" y="46" width="32" height="30"/>
+                                        <state key="normal" title="Sent"/>
+                                        <connections>
+                                            <segue destination="63L-mB-kSu" kind="show" id="NIn-wk-Op2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Rlu-qh-DDB" secondAttribute="trailing" id="GBN-qb-uED"/>
+                                    <constraint firstItem="Rlu-qh-DDB" firstAttribute="leading" secondItem="7sX-yz-hAm" secondAttribute="leading" id="pdB-7V-PIN"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.25928350649999998" blue="0.37793043510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7sX-yz-hAm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0Kd-di-3bT"/>
+                            <constraint firstItem="7sX-yz-hAm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OMw-Hu-6gg"/>
+                            <constraint firstItem="7sX-yz-hAm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="si9-1o-Rov"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7sX-yz-hAm" secondAttribute="trailing" id="u9U-nB-bjA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="masterTextField" destination="Rlu-qh-DDB" id="PpP-lZ-PCI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="DXo-Gl-bxU">
+            <objects>
+                <viewController id="63L-mB-kSu" customClass="DetailViewController" customModule="UsingSegue" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EYW-aW-xB7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="jsV-OZ-IZG">
+                                <rect key="frame" x="0.0" y="295.5" width="375" height="76"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F3S-SD-uWI">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kXt-K0-3sh">
+                                        <rect key="frame" x="169" y="46" width="37" height="30"/>
+                                        <state key="normal" title="Done"/>
+                                        <connections>
+                                            <segue destination="Das-Vd-n4F" kind="unwind" unwindAction="unwindFor:" id="oOK-gY-D86"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="F3S-SD-uWI" firstAttribute="leading" secondItem="jsV-OZ-IZG" secondAttribute="leading" id="SJN-1I-sYA"/>
+                                    <constraint firstAttribute="trailing" secondItem="F3S-SD-uWI" secondAttribute="trailing" id="uas-Fe-Gmh"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jsV-OZ-IZG" firstAttribute="centerY" secondItem="EYW-aW-xB7" secondAttribute="centerY" id="cGD-3h-8vl"/>
+                            <constraint firstItem="VVj-7v-2IM" firstAttribute="trailing" secondItem="jsV-OZ-IZG" secondAttribute="trailing" id="diR-BV-07i"/>
+                            <constraint firstItem="jsV-OZ-IZG" firstAttribute="leading" secondItem="VVj-7v-2IM" secondAttribute="leading" id="tCb-k7-fjg"/>
+                            <constraint firstItem="jsV-OZ-IZG" firstAttribute="centerX" secondItem="EYW-aW-xB7" secondAttribute="centerX" id="w08-FS-9Bd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VVj-7v-2IM"/>
+                    </view>
+                    <connections>
+                        <outlet property="detailtextField" destination="F3S-SD-uWI" id="FWj-AI-nin"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NKx-pP-XyH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Das-Vd-n4F" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1607" y="68"/>
         </scene>
     </scenes>
 </document>

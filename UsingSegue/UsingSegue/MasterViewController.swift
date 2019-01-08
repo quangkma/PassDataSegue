@@ -8,13 +8,23 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MasterViewController: UIViewController {
 
+    @IBOutlet weak var masterTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as? DetailViewController
+        destination?.dataText = masterTextField.text
+    }
+    
+    @IBAction func unwind(for unwindSegue: UIStoryboardSegue) {
+        let source = unwindSegue.source as? DetailViewController
+        masterTextField.text = source?.dataText
+    }
 
 }
 

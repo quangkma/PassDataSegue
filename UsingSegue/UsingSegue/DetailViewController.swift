@@ -10,10 +10,21 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    @IBOutlet weak var detailtextField: UITextField!
+    var dataText: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if dataText != nil {
+            detailtextField.text = dataText
+        }
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        dataText = detailtextField.text
     }
     
 

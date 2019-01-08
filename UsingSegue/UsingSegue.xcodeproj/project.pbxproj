@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		84F0583321E4E9E900DC0C03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F0583221E4E9E900DC0C03 /* AppDelegate.swift */; };
-		84F0583521E4E9E900DC0C03 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F0583421E4E9E900DC0C03 /* ViewController.swift */; };
+		84F0583521E4E9E900DC0C03 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F0583421E4E9E900DC0C03 /* MasterViewController.swift */; };
 		84F0583821E4E9E900DC0C03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F0583621E4E9E900DC0C03 /* Main.storyboard */; };
 		84F0583A21E4E9EB00DC0C03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84F0583921E4E9EB00DC0C03 /* Assets.xcassets */; };
 		84F0583D21E4E9EB00DC0C03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F0583B21E4E9EB00DC0C03 /* LaunchScreen.storyboard */; };
 		84F0584821E4E9EB00DC0C03 /* UsingSegueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F0584721E4E9EB00DC0C03 /* UsingSegueTests.swift */; };
+		84F0585321E4EA2F00DC0C03 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F0585221E4EA2F00DC0C03 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +29,7 @@
 /* Begin PBXFileReference section */
 		84F0582F21E4E9E900DC0C03 /* UsingSegue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UsingSegue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F0583221E4E9E900DC0C03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		84F0583421E4E9E900DC0C03 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		84F0583421E4E9E900DC0C03 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		84F0583721E4E9E900DC0C03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84F0583921E4E9EB00DC0C03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84F0583C21E4E9EB00DC0C03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +37,7 @@
 		84F0584321E4E9EB00DC0C03 /* UsingSegueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UsingSegueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F0584721E4E9EB00DC0C03 /* UsingSegueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsingSegueTests.swift; sourceTree = "<group>"; };
 		84F0584921E4E9EB00DC0C03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84F0585221E4EA2F00DC0C03 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				84F0583221E4E9E900DC0C03 /* AppDelegate.swift */,
-				84F0583421E4E9E900DC0C03 /* ViewController.swift */,
+				84F0583421E4E9E900DC0C03 /* MasterViewController.swift */,
+				84F0585221E4EA2F00DC0C03 /* DetailViewController.swift */,
 				84F0583621E4E9E900DC0C03 /* Main.storyboard */,
 				84F0583921E4E9EB00DC0C03 /* Assets.xcassets */,
 				84F0583B21E4E9EB00DC0C03 /* LaunchScreen.storyboard */,
@@ -197,7 +200,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84F0583521E4E9E900DC0C03 /* ViewController.swift in Sources */,
+				84F0585321E4EA2F00DC0C03 /* DetailViewController.swift in Sources */,
+				84F0583521E4E9E900DC0C03 /* MasterViewController.swift in Sources */,
 				84F0583321E4E9E900DC0C03 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
